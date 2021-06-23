@@ -1,0 +1,82 @@
+<head><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Tangerine" rel="stylesheet"> 
+    <style>
+        body {
+            background-color: rgb(231, 221, 221);
+        }
+        .group {
+            margin-left: 180px;
+            margin-top: 60px;
+        }
+        .group label {
+            font-size: 30px;
+        }
+    </style>
+</head>
+    <body>
+        <a href="./index.html"> Home</a>
+        <div class="group">
+        <h1> Samosa Recipe – How to Make Perfect Samosa <h1>
+        <h3> <i>Crispy, flaky Samosa is the perfect appetizer for any celebration. 
+            Filled with a spicy potato filling, this Samosa is also vegan!
+        </i></h3>
+        <img src="./img/samosa.jpg" align="center" height="400">
+        
+        
+            <h2> Ingredients: </h2>
+            <label>For how many people</label>
+            <input type="text" id ="numberOfPeople" value="4" >
+            <input type="submit" name="Enter" onclick="getIngredientsforCurry()">
+            
+            <div>
+                <ul> 
+                    <li>  All purpose flour (gm): <span id="maida">500</span></li>                
+                    <li>  Onion (gm):<span id="onion">100 </span> </li>                
+                    <li>  Potatao (gm):<span id="potatao">500 </span></li>
+                    <li>  Oil (ml):<span id="oil">300 </span> </li>                
+                    <li>  Salt (gm):<span id="salt">10 </span></li>
+                </div>
+            
+            <h2> Steps : </h2>
+            
+            <h3> For Cover: </h3>            
+            <p>
+            <ul>
+            <li>Mix all purpose flour,salt,2 TSP of oil.</li>
+            <li>Add a little water at a time.</li>
+            <li>Mix and knead well to turn into a soft pliable dough.</li>
+            <li>Cover it with moist muslin cloth and keep aside for 20 minutes.</li>
+            </ul>
+            </p>
+            <h3>For Stuffing: </h3>            
+            <ul>      
+                <li>Boil Potatoes.
+                </li>In a bowl add mashed potatoes and all dry masalas (salt, chili powder, mango powder, garam masala) and green chilles, ginger and Mix well.</li>
+                <li>Add green peas, cashews and raisins and mix well.</li>
+                <li>Add coriander and keep aside.</li>   
+            </ul>
+            <h3>For samosa: </h3>            
+                <ul>   
+                <li>Make small rolls of dough and roll it into a 4″ diameter circle.</li>
+                <li>Cut it into two parts like semi-circle.</li>
+                <li>Now take one semi circle and fold it like a cone. Use water while doing so.</li>
+                <li>Place a spoon of filling in the cone and seal the third side using a drop of water.</li>
+                <li>Heat oil in a kadhai and deep fry till golden brown (fry on a medium flame).</li>
+                <li>Serve samosa hot with hari chutney, tamarind chutney.</li>
+                </h1>
+            </p>
+        </div>
+            <script>
+                function getIngredientsforCurry() {
+                    var people = document.getElementById("numberOfPeople").value;
+                    var ingredient = {maida:500, onion:100, potatao: 500, oil:300, salt:10}; 
+                    document.getElementById("maida").innerHTML = ingredient.maida * people/ 4;
+                    document.getElementById("onion").innerHTML = ingredient.onion * people/4;
+                    document.getElementById("potatao").innerHTML = (ingredient.potatao * people) / 4;
+                    document.getElementById("oil").innerHTML = ingredient.oil * people/4;
+                    document.getElementById("salt").innerHTML = (ingredient.salt * people) / 2;
+                }
+            </script>
+        </body>
+    </head>
+</html>
